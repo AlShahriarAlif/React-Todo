@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Modal, Box, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
+import API_BASE_URL from "../config";
 
 export function Profile() {
     const [profileData, setProfileData] = useState(null);

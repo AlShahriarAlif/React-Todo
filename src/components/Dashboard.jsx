@@ -9,6 +9,7 @@ import { PriorityFiltering } from "./PriorityFiltering";
 import { Sorting } from "./Sorting";
 import PersonIcon from '@mui/icons-material/Person';
 import { Profile } from "./Profile";
+import API_BASE_URL from "../config";
 
 export function Dashboard() {
     const navigate = useNavigate();

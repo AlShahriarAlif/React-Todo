@@ -6,6 +6,7 @@ import { Home } from "./components/Home";
 import { Dashboard } from "./components/Dashboard";
 import { Toaster } from 'react-hot-toast';
 import { Profile } from "./components/Profile";
+import API_BASE_URL from "../config";
 
 function App() {
   return <>

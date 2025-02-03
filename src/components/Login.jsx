@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
+import API_BASE_URL from "../config";
 
 function Login() {
     const navigate = useNavigate();

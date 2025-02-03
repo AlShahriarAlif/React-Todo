@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
+import API_BASE_URL from "../config";
 
 import toast from 'react-hot-toast';
 import { useState,useEffect } from 'react';
