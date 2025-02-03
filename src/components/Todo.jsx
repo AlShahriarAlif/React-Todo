@@ -5,7 +5,6 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Typography from '@mui/material/Typography';
-import API_BASE_URL from "../config";
 
 import toast from 'react-hot-toast';
 import { useState,useEffect } from 'react';
@@ -16,7 +15,7 @@ export function Todo({ title, is_completed, priority, id, updateTodos,deadline,d
 
     async function deleteClick() {
         try {
-            const response = await fetch(`${API_BASE_URL}/todo/${id}`, {
+            const response = await fetch(`https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/todo/${id}`, {
                 method: "DELETE"
             });
             const data = await response.json();
@@ -29,7 +28,7 @@ export function Todo({ title, is_completed, priority, id, updateTodos,deadline,d
 
     async function updateState() {
         try {
-            const response = await fetch(`${API_BASE_URL}/todo/${id}`, {
+            const response = await fetch(`https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/todo/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

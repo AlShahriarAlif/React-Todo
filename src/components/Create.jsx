@@ -1,7 +1,6 @@
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { useState } from 'react';
-import API_BASE_URL from "../config";
 
 import { useNavigate } from "react-router-dom"; 
 import toast from 'react-hot-toast';
@@ -29,7 +28,7 @@ function Create() {
             "password": pass,
             "profile_picture": ""
         };
-        const response = await fetch("${API_BASE_URL}/register", {
+        const response = await fetch("https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

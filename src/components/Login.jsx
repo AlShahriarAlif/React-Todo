@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useNavigate } from "react-router-dom";
-import API_BASE_URL from "../config";
+
 
 function Login() {
     const navigate = useNavigate();
@@ -16,7 +16,7 @@ function Login() {
             "username": username, 
             "password": pass
         }  
-        const r = await fetch("${API_BASE_URL}/login", {
+        const r = await fetch("https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Modal, Box, TextField, Button } from "@mui/material";
 import toast from "react-hot-toast";
 import { PieChart, Pie, Cell, Tooltip, Legend } from "recharts";
-import API_BASE_URL from "../config";
+
 
 export function Profile() {
     const [profileData, setProfileData] = useState(null);
@@ -22,7 +22,7 @@ export function Profile() {
                     return;
                 }
 
-                const response = await fetch(`${API_BASE_URL}/profile/${username}`);
+                const response = await fetch(`https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/profile/${username}`);
                 if (!response.ok) throw new Error("Failed to fetch profile");
 
                 const data = await response.json();
@@ -36,7 +36,7 @@ export function Profile() {
 
         async function fetchTodos() {
             try {
-                const response = await fetch("${API_BASE_URL}/todos");
+                const response = await fetch("https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/todos");
                 if (!response.ok) throw new Error("Failed to fetch todos");
 
                 const data = await response.json();

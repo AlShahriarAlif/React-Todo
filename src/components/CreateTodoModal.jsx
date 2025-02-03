@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import TextField from "@mui/material/TextField"
 import { useState } from 'react';
 import toast from 'react-hot-toast';
-import API_BASE_URL from "../config";
+
 
 const style = {
   position: 'absolute',
@@ -31,7 +31,7 @@ export function CreateTodoModal({ updateTodos }) {
             "deadline": deadline,
             "priority": parseInt(priority)
         };
-        const r = await fetch("${API_BASE_URL}/todo", {
+        const r = await fetch("https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/todo", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

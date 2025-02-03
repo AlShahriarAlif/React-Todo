@@ -9,7 +9,7 @@ import { PriorityFiltering } from "./PriorityFiltering";
 import { Sorting } from "./Sorting";
 import PersonIcon from '@mui/icons-material/Person';
 import { Profile } from "./Profile";
-import API_BASE_URL from "../config";
+
 
 export function Dashboard() {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ export function Dashboard() {
     const [sortBy, setSortBy] = useState("none"); 
 
     async function getTodos() {
-        const r = await fetch("${API_BASE_URL}/todos");
+        const r = await fetch("https://5nvfy5p7we.execute-api.ap-south-1.amazonaws.com/dev/todos");
         const j = await r.json();
         setTodoList(j);
     }

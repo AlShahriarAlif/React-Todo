@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import API_BASE_URL from "../config";
+
 
 function Sorting({ setSortBy }) {
     const [sortOption, setSortOption] = useState("none");
