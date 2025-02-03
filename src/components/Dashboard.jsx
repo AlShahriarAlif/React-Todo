@@ -20,7 +20,7 @@ export function Dashboard() {
     const [sortBy, setSortBy] = useState("none"); 
 
     async function getTodos() {
-        const r = await fetch("http://3.109.211.104:8001/todos");
+        const r = await fetch("${API_BASE_URL}/todos");
         const j = await r.json();
         setTodoList(j);
     }

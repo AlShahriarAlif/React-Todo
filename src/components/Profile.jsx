@@ -21,7 +21,7 @@ export function Profile() {
                     return;
                 }
 
-                const response = await fetch(`http://3.109.211.104:8001/profile/${username}`);
+                const response = await fetch(`${API_BASE_URL}/profile/${username}`);
                 if (!response.ok) throw new Error("Failed to fetch profile");
 
                 const data = await response.json();
@@ -35,7 +35,7 @@ export function Profile() {
 
         async function fetchTodos() {
             try {
-                const response = await fetch("http://3.109.211.104:8001/todos");
+                const response = await fetch("${API_BASE_URL}/todos");
                 if (!response.ok) throw new Error("Failed to fetch todos");
 
                 const data = await response.json();
@@ -62,7 +62,7 @@ export function Profile() {
 
     async function handleUpdateProfile() {
         try {
-            const response = await fetch(`http://3.109.211.104:8001/profile/${username}`, {
+            const response = await fetch(`${API_BASE_URL}/profile/${username}`, {
                 method: "PUT",
                 headers: {
                     "Accept": "application/json",

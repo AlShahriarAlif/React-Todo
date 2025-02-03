@@ -15,7 +15,7 @@ export function Todo({ title, is_completed, priority, id, updateTodos,deadline,d
 
     async function deleteClick() {
         try {
-            const response = await fetch(`http://3.109.211.104:8001/todo/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/todo/${id}`, {
                 method: "DELETE"
             });
             const data = await response.json();
@@ -28,7 +28,7 @@ export function Todo({ title, is_completed, priority, id, updateTodos,deadline,d
 
     async function updateState() {
         try {
-            const response = await fetch(`http://3.109.211.104:8001/todo/${id}`, {
+            const response = await fetch(`${API_BASE_URL}/todo/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"

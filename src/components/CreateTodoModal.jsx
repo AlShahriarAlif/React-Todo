@@ -30,7 +30,7 @@ export function CreateTodoModal({ updateTodos }) {
             "deadline": deadline,
             "priority": parseInt(priority)
         };
-        const r = await fetch("http://3.109.211.104:8001/todo", {
+        const r = await fetch("${API_BASE_URL}/todo", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
